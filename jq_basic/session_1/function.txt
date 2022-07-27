@@ -1,0 +1,138 @@
+Tổng hợp tất cả các hàm trong jquery
++ link xem chi tiết:
+                    - https://www.w3schools.com/jquery/jquery_ref_html.asp<Hàm trong W3shool>
+                    - https://freetuts.net/su-kien-trong-jquery-jquery-event-582.html<Hàm xử lí form>                 
+
+1: show(), hide(), toggle()
+     + show() --> Thiết lập thuộc tính display:block
+     + hide() --> Thiết lập thuộc tính display:none
+     + toggle() --> Thiết lập ẩn và hiện 
+     + Cú pháp: 
+               - $("selector").show(speed, callback)
+               - $("selector").hide(speed, callback)
+               - $(selector).toggle(speed,callback);
+                    * selector là phần tử HTML được chỉ định
+                    * speed là tốc độ ẩn hoặc là hiện thị (slow,fast,1000,200...)
+                    * callback là hàm gọi lại sau khi đã thực thi hide() và show()
+               
+     + Chi tiết:
+                - https://www.w3schools.com/jquery/jquery_hide_show.asp
+               - https://freetuts.net/show-hide-jquery-5451.html
+
+
+2: slideUp(), slideDown(), slideToggle()
+     + slideUp() --> Ẩn hiện 1 các thẻ HTML với hiệu ứng trượt lên
+     + slideDown() --> Ẩn hiện 1 các thẻ HTML với hiệu ứng trượt xuống
+     + slideToggle() --> Sự kết hợp giữa slideUp() và slideDown()
+     + Cú pháp: 
+               - $("selector").slideUp(speed,callback)
+               - $("selector").slideDown(speed,callback)
+               - $(selector).slideToggle(speed,callback)
+                    * selector là phần tử HTML được chỉ định
+                    * speed là tốc độ ẩn hoặc là hiện thị (slow,fast,1000,200...)
+                    * callback là hàm gọi lại sau khi đã thực thi slideUp() và slideDown()
+     + Chi tiết: 
+               - https://www.w3schools.com/jquery/jquery_slide.asp
+               - https://freetuts.net/slideup-va-slidedown-jquery-5455.html
+
+
+3: fadeIn(), fadeOut(), fadeToggle(), fadeTo()
+     + fadeIn() --> Làm mờ dần 1 phần tử ẩn
+     + fadeOut() --> Làm mờ dần 1 phần tử hiển thị
+     + fadeToggle() --> Kết hợp giữa 2 phương thức fadeIn() và fadeOut()
+     + fadeTo() --> Làm mờ dần 1 phần tử đến 1 độ mờ nhất định
+     + Cú pháp:
+               - $("selector").fadeIn(speed,callback)
+               - $("selector").fadeOut(speed,callback)
+               - $("selector").fadeToggle(speed,callback)
+               - $(selector).fadeTo(speed,opacity,callback);
+                    * selector là phần tử HTML được chỉ định
+                    * speed là tốc độ ẩn hoặc là hiện thị (slow,fast,1000,200...)
+                    * callback là hàm gọi lại sau khi đã thực thi fadeIn() và fadeOut()
+     + Chi tiết: 
+               - https://www.w3schools.com/jquery/jquery_fade.asp 
+               - https://freetuts.net/fadein-va-fadeout-trong-jquery-5454.html
+
+
+4: stop()
+     + stop() --> Dừng hoạt ảnh hoặc là hiệu ứng trước khi kết thúc
+     + Hoạt động với tất cả hiệu ứng jquery
+     + Cú pháp:
+               - $(selector).stop();
+                    * selector là phần tử HTML được chỉ định
+                    * stop() không có tham số
+     + Chi tiết: 
+               - https://www.w3schools.com/jquery/jquery_stop.asp
+
+
+5: html(), text(), val()
+     + html() --> Dùng để lấy nội dùng hoặc thiết lập nội dung cho phần tử đã chọn (Bao gồm đánh dấu HMTL)
+     + text() --> Dùng để lấy nội dùng hoặc thiết lập nội dung cho phần tử đã chọn (Không bao gồm đánh dấu HMTL)
+     + val()  --> Lấy giá trị hoặc đặt giá trị của các trường biểu mẫu
+     + Cú pháp:
+               - $("selector").html()<Lấy nội dung> hoặc $("selector").html("Hello word")<Thay đổi nội dung>
+               - $("selector").text()<Lấy nội dung> hoặc $("selector").html("Hello word")<Thay đổi nội dung>
+               - $("selector").val()
+     + Chi tiết:
+                - https://freetuts.net/jquery-attributes-html-115.html
+               - https://www.w3schools.com/jquery/jquery_dom_get.asp
+
+
+6: remove(), empty()
+     + remove() --> Loại bỏ phần tử đã chọn và phần tử con của nó
+     + empty() --> Loại bỏ phần tử con của các phẩn tử đã chọn
+     + Cú pháp:
+               - $("selector").remove()
+               - $("selector").empty()
+     + Chi tiết:
+               - https://www.w3schools.com/jquery/jquery_dom_remove.asp
+
+
+7: addClass(), removeClass(), toggleClass(), css()
+     + addClass() --> Thêm class cho đối tượng HTML đã chọn
+     + removeClass() --> Xóa bỏ class cho đối tượng HTML đã chọn
+     + toggleClass() --> Chuyển đổi giữa việc thêm/xóa của đối tượng HTML
+     + css() --> Đặt hoặc trả về thuộc tính của đối tượng HTML
+     + Cú pháp:
+               - $("selector").addClass("className(có thể 1 hoặc nhiều class)");               
+               - $("selector").removeClass("className(có thể 1 hoặc nhiều class)");               
+               - $("selector").toggleClass("className(có thể 1 hoặc nhiều class)");
+               - $("selector").css({
+                                        "propertyname":"value",
+                                        "propertyname":"value",...
+                                   }); 
+     + Chi tiết:
+                - https://www.w3schools.com/jquery/jquery_css_classes.asp  
+               - https://freetuts.net/jquery-attributes-addclass-removeclass-110.html
+
+
+8: hassClass(), not()
+     + hassClass() --> Kiểm tra xem có bất kỳ phần tử nào được chọn có tên lớp được chỉ định hay không(trả về true/false)
+     + not() --> Trả về phần tử không phù hợp với tiêu chí nhất định
+     + Cú pháp:
+               - $("selector").hassClass("className")
+               - $("selector").not(".className")<Thêm dấu chấm trước tên class đã chọn>
+     + Chi tiết:
+                - https://www.w3schools.com/jquery/traversing_not.asp
+                - https://freetuts.net/jquery-attributes-hasclass-114.html
+
+
+9: attr(), data()
+     + atrr() --> Lấy giá trị hoặc gán giá trị cho các thuộc tính của 1 hoặc nhiều thẻ HTML(id,name,src,href)
+     + data() --> Gắn dữ liệu hoặc lấy dữ liệu từ các phần tử đã chọn
+     + Cú pháp:
+               - $(selector).attr(attribute)<Trả về giá trị của 1 thuộc tính>
+               - $(selector).data(name)
+     + Chi tiết:
+               - https://freetuts.net/jquery-attributes-attr-prop-111.html
+               - https://freetuts.net/an-hien-noi-dung-khi-click-vao-button-trong-jquery-5438.html <Bài tập về attr()>
+               - https://www.w3schools.com/jquery/misc_data.asp <data()>
+
+
+10: Xem thêm về ajax: https://www.w3schools.com/jquery/jquery_ref_ajax.asp
+
+
+
+                         
+
+
